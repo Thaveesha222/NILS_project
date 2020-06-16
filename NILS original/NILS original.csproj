@@ -1,0 +1,1194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{907C9E0C-EA6B-4183-9ED5-10EF56B3769C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NILS_original</RootNamespace>
+    <AssemblyName>NILS original</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\..\..\Downloads\AForge.Video.DirectShow\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.5\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.7.0.7, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.7.0.7\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.45.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.45.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.45.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.45.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v2, Version=1.43.0.1835, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Drive.v2.1.43.0.1835\lib\net45\Google.Apis.Drive.v2.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v3, Version=1.42.0.1750, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Drive.v3.1.42.0.1750\lib\net45\Google.Apis.Drive.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Gmail.v1, Version=1.45.0.1950, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Gmail.v1.1.45.0.1950\lib\net45\Google.Apis.Gmail.v1.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.45.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.45.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MimeKit, Version=2.7.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.2.7.0\lib\net46\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="Spire.Doc, Version=8.2.4.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Doc.8.2.4\lib\net46\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.8.46, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Doc.8.2.4\lib\net46\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=6.2.1.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Doc.8.2.4\lib\net46\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+    </Reference>
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.25\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="WhatsAppApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WhatsAppAPI.15.4.29\lib\net40\WhatsAppApi.dll</HintPath>
+    </Reference>
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add Student Mark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Student Mark.designer.cs">
+      <DependentUpon>Add Student Mark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_lecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_lecturer.Designer.cs">
+      <DependentUpon>Add_lecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_new_batch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_new_batch.Designer.cs">
+      <DependentUpon>Add_new_batch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_new_lecturer_csv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_new_lecturer_csv.Designer.cs">
+      <DependentUpon>Add_new_lecturer_csv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_new_session.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_new_session.Designer.cs">
+      <DependentUpon>Add_new_session.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Dip_add_stud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Dip_add_stud.Designer.cs">
+      <DependentUpon>Admin_Dip_add_stud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_view_submissons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_view_submissons.Designer.cs">
+      <DependentUpon>admin_view_submissons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance_for_programs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance_for_programs.Designer.cs">
+      <DependentUpon>Attendance_for_programs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Certifs_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Certifs_view.Designer.cs">
+      <DependentUpon>Certifs_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordSetting.designer.cs">
+      <DependentUpon>ChangePasswordSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course_details.Designer.cs">
+      <DependentUpon>Course_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Credentials.cs" />
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database.cs" />
+    <Compile Include="Delete_participants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_participants.Designer.cs">
+      <DependentUpon>Delete_participants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="download.cs" />
+    <Compile Include="Class_student.cs" />
+    <Compile Include="Admin_Update_Program.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Update_Program.Designer.cs">
+      <DependentUpon>Admin_Update_Program.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADmin_Certif_add_stud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADmin_Certif_add_stud.Designer.cs">
+      <DependentUpon>ADmin_Certif_add_stud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E-mail.cs" />
+    <Compile Include="edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit.Designer.cs">
+      <DependentUpon>edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_contact_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_contact_info.Designer.cs">
+      <DependentUpon>Edit_contact_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_course_fee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_course_fee.Designer.cs">
+      <DependentUpon>Edit_course_fee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_details_of_program_student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_details_of_program_student.Designer.cs">
+      <DependentUpon>Edit_details_of_program_student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_dip_courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_dip_courses.Designer.cs">
+      <DependentUpon>Edit_dip_courses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_lec_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_lec_details.Designer.cs">
+      <DependentUpon>Edit_lec_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_personal_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_personal_info.Designer.cs">
+      <DependentUpon>Edit_personal_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_reg_fee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_reg_fee.Designer.cs">
+      <DependentUpon>Edit_reg_fee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_scourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_scourse.Designer.cs">
+      <DependentUpon>Edit_scourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit_session_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_session_details.Designer.cs">
+      <DependentUpon>edit_session_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_short.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_short.Designer.cs">
+      <DependentUpon>Edit_short.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_students_courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_students_courses.Designer.cs">
+      <DependentUpon>Edit_students_courses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_stud_modules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_stud_modules.Designer.cs">
+      <DependentUpon>Edit_stud_modules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_workplace_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_workplace_info.Designer.cs">
+      <DependentUpon>Edit_workplace_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email_recipients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_recipients.Designer.cs">
+      <DependentUpon>Email_recipients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gmail.cs" />
+    <Compile Include="Participation_by_destrict_report.cs" />
+    <Compile Include="Participation_designation_report.cs" />
+    <Compile Include="Income_report_for_program.cs" />
+    <Compile Include="Program_budget_report.cs" />
+    <Compile Include="General_methods.cs" />
+    <Compile Include="G_maps.cs" />
+    <Compile Include="Lecturer Specific Area.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer Specific Area.designer.cs">
+      <DependentUpon>Lecturer Specific Area.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lec_class.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainInterface.designer.cs">
+      <DependentUpon>MainInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageWSprogss.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageWSprogss.Designer.cs">
+      <DependentUpon>ManageWSprogss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_workshops_and_short_programs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_workshops_and_short_programs.Designer.cs">
+      <DependentUpon>Manage_workshops_and_short_programs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module_selection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_selection.Designer.cs">
+      <DependentUpon>Module_selection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New_company.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New_company.Designer.cs">
+      <DependentUpon>New_company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="openMainform.cs" />
+    <Compile Include="Program_company_participation_report.cs" />
+    <Compile Include="Program_participation_general_report.cs" />
+    <Compile Include="Program_payments_report.cs" />
+    <Compile Include="Ratings_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ratings_info.Designer.cs">
+      <DependentUpon>Ratings_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search_criteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_criteria.Designer.cs">
+      <DependentUpon>Search_criteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Select_Compulsory_Modules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_Compulsory_Modules.Designer.cs">
+      <DependentUpon>Select_Compulsory_Modules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="show_studs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="show_studs.Designer.cs">
+      <DependentUpon>show_studs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SMS_class.cs" />
+    <Compile Include="SMS_recipents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMS_recipents.Designer.cs">
+      <DependentUpon>SMS_recipents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Student_payement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_payement.Designer.cs">
+      <DependentUpon>Student_payement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_profiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_profiles.Designer.cs">
+      <DependentUpon>Student_profiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loading.Designer.cs">
+      <DependentUpon>loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_payements_certif.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_payements_certif.Designer.cs">
+      <DependentUpon>UC_payements_certif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_payments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_payments.Designer.cs">
+      <DependentUpon>UC_payments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_short_payment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_short_payment.Designer.cs">
+      <DependentUpon>UC_short_payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_mark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_mark.designer.cs">
+      <DependentUpon>Update_mark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view.cs" />
+    <Compile Include="View_lec_doc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_lec_doc.Designer.cs">
+      <DependentUpon>View_lec_doc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_marks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_marks.Designer.cs">
+      <DependentUpon>View_marks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view_payements_certif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_payements_certif.Designer.cs">
+      <DependentUpon>view_payements_certif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_payements_short.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_payements_short.Designer.cs">
+      <DependentUpon>View_payements_short.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view_payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_payment.Designer.cs">
+      <DependentUpon>view_payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebBrowser.Designer.cs">
+      <DependentUpon>WebBrowser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add Student Mark.resx">
+      <DependentUpon>Add Student Mark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_lecturer.resx">
+      <DependentUpon>Add_lecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_new_batch.resx">
+      <DependentUpon>Add_new_batch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_new_lecturer_csv.resx">
+      <DependentUpon>Add_new_lecturer_csv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_new_session.resx">
+      <DependentUpon>Add_new_session.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Dip_add_stud.resx">
+      <DependentUpon>Admin_Dip_add_stud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Update_Program.resx">
+      <DependentUpon>Admin_Update_Program.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADmin_Certif_add_stud.resx">
+      <DependentUpon>ADmin_Certif_add_stud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_view_submissons.resx">
+      <DependentUpon>admin_view_submissons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance_for_programs.resx">
+      <DependentUpon>Attendance_for_programs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Certifs_view.resx">
+      <DependentUpon>Certifs_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordSetting.resx">
+      <DependentUpon>ChangePasswordSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course_details.resx">
+      <DependentUpon>Course_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_participants.resx">
+      <DependentUpon>Delete_participants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit.resx">
+      <DependentUpon>edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_contact_info.resx">
+      <DependentUpon>Edit_contact_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_course_fee.resx">
+      <DependentUpon>Edit_course_fee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_details_of_program_student.resx">
+      <DependentUpon>Edit_details_of_program_student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_dip_courses.resx">
+      <DependentUpon>Edit_dip_courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_lec_details.resx">
+      <DependentUpon>Edit_lec_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_personal_info.resx">
+      <DependentUpon>Edit_personal_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_reg_fee.resx">
+      <DependentUpon>Edit_reg_fee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_scourse.resx">
+      <DependentUpon>Edit_scourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_session_details.resx">
+      <DependentUpon>edit_session_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_short.resx">
+      <DependentUpon>Edit_short.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_students_courses.resx">
+      <DependentUpon>Edit_students_courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_stud_modules.resx">
+      <DependentUpon>Edit_stud_modules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_workplace_info.resx">
+      <DependentUpon>Edit_workplace_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email_recipients.resx">
+      <DependentUpon>Email_recipients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer Specific Area.resx">
+      <DependentUpon>Lecturer Specific Area.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainInterface.resx">
+      <DependentUpon>MainInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageWSprogss.resx">
+      <DependentUpon>ManageWSprogss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_workshops_and_short_programs.resx">
+      <DependentUpon>Manage_workshops_and_short_programs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_selection.resx">
+      <DependentUpon>Module_selection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New_company.resx">
+      <DependentUpon>New_company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ratings_info.resx">
+      <DependentUpon>Ratings_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search_criteria.resx">
+      <DependentUpon>Search_criteria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_Compulsory_Modules.resx">
+      <DependentUpon>Select_Compulsory_Modules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="show_studs.resx">
+      <DependentUpon>show_studs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMS_recipents.resx">
+      <DependentUpon>SMS_recipents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_payement.resx">
+      <DependentUpon>Student_payement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_profiles.resx">
+      <DependentUpon>Student_profiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loading.resx">
+      <DependentUpon>loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UC_payements_certif.resx">
+      <DependentUpon>UC_payements_certif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_payments.resx">
+      <DependentUpon>UC_payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_short_payment.resx">
+      <DependentUpon>UC_short_payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_mark.resx">
+      <DependentUpon>Update_mark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_lec_doc.resx">
+      <DependentUpon>View_lec_doc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_marks.resx">
+      <DependentUpon>View_marks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_payements_certif.resx">
+      <DependentUpon>view_payements_certif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_payements_short.resx">
+      <DependentUpon>View_payements_short.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_payment.resx">
+      <DependentUpon>view_payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebBrowser.resx">
+      <DependentUpon>WebBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\client_secret_526728548470-8q6raufa2qvng71j7vrcart69slh3320.apps.googleusercontent.com.json" />
+    <None Include="bin\Debug\credentials %281%29.json" />
+    <None Include="bin\Debug\debug.log" />
+    <None Include="bin\Debug\NILS original.exe.config" />
+    <None Include="bin\Debug\token.json\Google.Apis.Auth.OAuth2.Responses.TokenResponse-user" />
+    <None Include="credentials %281%29.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="occupations.csv" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ppl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adobe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word.png" />
+    <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nils_logo.jpg.jpg" />
+    <None Include="Icons &amp; Images\add_user_group_woman_man_skin_type_7_48px.png" />
+    <None Include="Icons &amp; Images\classroom_48px.png" />
+    <None Include="Icons &amp; Images\permanent_job_48px.png" />
+    <None Include="Icons &amp; Images\calendar_plus_48px.png" />
+    <None Include="Icons &amp; Images\timetable_48px.png" />
+    <None Include="Icons &amp; Images\add_64px.png" />
+    <None Include="Icons &amp; Images\cash_in_hand_48px.png" />
+    <None Include="Icons &amp; Images\graph_report_48px.png" />
+    <None Include="Icons &amp; Images\training_48px.png" />
+    <None Include="Icons &amp; Images\class_48px.png" />
+    <None Include="Icons &amp; Images\submit_resume_48px.png" />
+    <None Include="Icons &amp; Images\increase_48px.png" />
+    <None Include="Icons &amp; Images\exam_48px.png" />
+    <None Include="Icons &amp; Images\empleados.png" />
+    <None Include="Icons &amp; Images\facebook_like_48px.png" />
+    <None Include="Icons &amp; Images\LB2Theme.png" />
+    <Content Include="bin\Debug\adobe.png" />
+    <Content Include="bin\Debug\CircularProgressBar.dll" />
+    <Content Include="bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\EnvDTE.dll" />
+    <Content Include="bin\Debug\EnvDTE80.dll" />
+    <Content Include="bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\Google.Apis.Auth.dll" />
+    <Content Include="bin\Debug\Google.Apis.Auth.pdb" />
+    <Content Include="bin\Debug\Google.Apis.Auth.PlatformServices.dll" />
+    <Content Include="bin\Debug\Google.Apis.Auth.xml" />
+    <Content Include="bin\Debug\Google.Apis.Core.dll" />
+    <Content Include="bin\Debug\Google.Apis.Core.pdb" />
+    <Content Include="bin\Debug\Google.Apis.Core.xml" />
+    <Content Include="bin\Debug\Google.Apis.dll" />
+    <Content Include="bin\Debug\Google.Apis.Drive.v2.dll" />
+    <Content Include="bin\Debug\Google.Apis.Drive.v2.pdb" />
+    <Content Include="bin\Debug\Google.Apis.Drive.v2.xml" />
+    <Content Include="bin\Debug\Google.Apis.Drive.v3.dll" />
+    <Content Include="bin\Debug\Google.Apis.Drive.v3.pdb" />
+    <Content Include="bin\Debug\Google.Apis.Drive.v3.xml" />
+    <Content Include="bin\Debug\Google.Apis.pdb" />
+    <Content Include="bin\Debug\Google.Apis.PlatformServices.dll" />
+    <Content Include="bin\Debug\Google.Apis.xml" />
+    <Content Include="bin\Debug\Icons &amp; Images\delete_bin_48px.png" />
+    <Content Include="bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\MetroFramework.Design.dll" />
+    <Content Include="bin\Debug\MetroFramework.dll" />
+    <Content Include="bin\Debug\MetroFramework.Fonts.dll" />
+    <Content Include="bin\Debug\Microsoft.Build.Framework.dll" />
+    <Content Include="bin\Debug\Microsoft.Build.Tasks.Core.dll" />
+    <Content Include="bin\Debug\Microsoft.Build.Utilities.Core.dll" />
+    <Content Include="bin\Debug\Microsoft.MSXML.dll" />
+    <Content Include="bin\Debug\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="bin\Debug\Microsoft.ReportViewer.DataVisualization.dll" />
+    <Content Include="bin\Debug\Microsoft.ReportViewer.Design.dll" />
+    <Content Include="bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll" />
+    <Content Include="bin\Debug\Microsoft.ReportViewer.WinForms.dll" />
+    <Content Include="bin\Debug\Microsoft.SqlServer.Types.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Data.Core.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Data.Services.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.GraphModel.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.VSHelp.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\NILS original.exe" />
+    <Content Include="bin\Debug\NILS original.pdb" />
+    <Content Include="bin\Debug\pdf.png" />
+    <Content Include="bin\Debug\presentation.png" />
+    <Content Include="bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\SqlServerTypes\x64\msvcr120.dll" />
+    <Content Include="bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll" />
+    <Content Include="bin\Debug\SqlServerTypes\x86\msvcr120.dll" />
+    <Content Include="bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll" />
+    <Content Include="bin\Debug\stdole.dll" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Dataflow.dll" />
+    <Content Include="bin\Debug\Transitions.dll" />
+    <Content Include="bin\Debug\Transitions.pdb" />
+    <Content Include="bin\Debug\Tulpep.NotificationWindow.dll" />
+    <Content Include="bin\Debug\VSLangProj.dll" />
+    <Content Include="bin\Debug\VSLangProj2.dll" />
+    <Content Include="bin\Debug\VSLangProj80.dll" />
+    <Content Include="bin\Debug\WhatsAppApi.dll" />
+    <Content Include="bin\Debug\WinFormAnimation.dll" />
+    <Content Include="bin\Debug\word.png" />
+    <Content Include="bin\Debug\word1.png" />
+    <Content Include="bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Icons &amp; Images\add_48px.png" />
+    <Content Include="Icons &amp; Images\add_camera_48px.png" />
+    <Content Include="Icons &amp; Images\add_user_male_50px.png" />
+    <Content Include="Icons &amp; Images\attach_100px.png" />
+    <Content Include="Icons &amp; Images\cancel_26px.png" />
+    <Content Include="Icons &amp; Images\cancel_48px.png" />
+    <Content Include="Icons &amp; Images\cerrar.png" />
+    <Content Include="Icons &amp; Images\classroom_50px.png" />
+    <Content Include="Icons &amp; Images\clientes.png" />
+    <Content Include="Icons &amp; Images\coins_48px.png" />
+    <Content Include="Icons &amp; Images\combo_chart_48px.png" />
+    <Content Include="Icons &amp; Images\compras.png" />
+    <Content Include="Icons &amp; Images\delete_bin_48px.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons &amp; Images\diploma_48px.png" />
+    <Content Include="Icons &amp; Images\doughnut_chart_48px.png" />
+    <Content Include="Icons &amp; Images\email_26px.png" />
+    <Content Include="Icons &amp; Images\error1_48px.png" />
+    <Content Include="Icons &amp; Images\error_48px.png" />
+    <Content Include="Icons &amp; Images\eye1_30px.png" />
+    <Content Include="Icons &amp; Images\eye_50px.png" />
+    <Content Include="Icons &amp; Images\facebook_old_48px.png" />
+    <Content Include="Icons &amp; Images\gmail_48px.png" />
+    <Content Include="Icons &amp; Images\home_50px.png" />
+    <Content Include="Icons &amp; Images\info_50px.png" />
+    <Content Include="Icons &amp; Images\instagram_48px.png" />
+    <Content Include="Icons &amp; Images\lock_26px.png" />
+    <Content Include="Icons &amp; Images\logout_rounded_up_64px.png" />
+    <Content Include="Icons &amp; Images\log_64px.png" />
+    <Content Include="Icons &amp; Images\maxi.png" />
+    <Content Include="Icons &amp; Images\menu_50px.png" />
+    <Content Include="Icons &amp; Images\microsoft_excel_48px.png" />
+    <Content Include="Icons &amp; Images\minimazar.png" />
+    <Content Include="Icons &amp; Images\nils_logo.jpg.jpg" />
+    <Content Include="Icons &amp; Images\ok_48px.png" />
+    <Content Include="Icons &amp; Images\opened_folder_48px.png" />
+    <Content Include="Icons &amp; Images\opened_folder_64px.png" />
+    <Content Include="Icons &amp; Images\order_history_48px.png" />
+    <Content Include="Icons &amp; Images\order_history_50px.png" />
+    <Content Include="Icons &amp; Images\order_history_64px.png" />
+    <Content Include="Icons &amp; Images\pagos.png" />
+    <Content Include="Icons &amp; Images\password_26px.png" />
+    <Content Include="Icons &amp; Images\password_reset_30px.png" />
+    <Content Include="Icons &amp; Images\password_reset_32px.png" />
+    <Content Include="Icons &amp; Images\plus_50px.png" />
+    <Content Include="Icons &amp; Images\print_48px.png" />
+    <Content Include="Icons &amp; Images\producto.png" />
+    <Content Include="Icons &amp; Images\producto2.png" />
+    <Content Include="Icons &amp; Images\read_online_48px.png" />
+    <Content Include="Icons &amp; Images\reportes.png" />
+    <Content Include="Icons &amp; Images\report_card_48px.png" />
+    <Content Include="Icons &amp; Images\res.png" />
+    <Content Include="Icons &amp; Images\salir.png" />
+    <Content Include="Icons &amp; Images\save_48px.png" />
+    <Content Include="Icons &amp; Images\search_48px.png" />
+    <Content Include="Icons &amp; Images\search_64px.png" />
+    <Content Include="Icons &amp; Images\search_account_64px.png" />
+    <Content Include="Icons &amp; Images\settings_48px.png" />
+    <Content Include="Icons &amp; Images\settings_50px.png" />
+    <Content Include="Icons &amp; Images\shutdown_48px.png" />
+    <Content Include="Icons &amp; Images\student_male_48px.png" />
+    <Content Include="Icons &amp; Images\submit_progress_48px.png" />
+    <Content Include="Icons &amp; Images\synchronize_26px.png" />
+    <Content Include="Icons &amp; Images\sync_64px.png" />
+    <Content Include="Icons &amp; Images\table_48px.png" />
+    <Content Include="Icons &amp; Images\telegram_app_32px.png" />
+    <Content Include="Icons &amp; Images\telegram_app_64px.png" />
+    <Content Include="Icons &amp; Images\training_64px.png" />
+    <Content Include="Icons &amp; Images\user_50px.png" />
+    <Content Include="Icons &amp; Images\user_groups_50px.png" />
+    <Content Include="Icons &amp; Images\venta.png" />
+    <Content Include="Icons &amp; Images\verified_account_48px.png" />
+    <Content Include="Icons &amp; Images\whatsapp_48px.png" />
+    <Content Include="LB2Theme.png" />
+    <Content Include="Properties\Icons &amp; Images\schedule_48px.png" />
+    <None Include="Resources\9ef90fb857a4bb4c1c054473260fdafe_students-clipart-gif_450-423.gif" />
+    <None Include="Resources\96408121-wedding-flower-border-on-blue-pastel-background-top-view-beautiful-floral-pattern-flat-lay-style-wom.jpg" />
+    <Content Include="Resources\addstud-resize.gif" />
+    <Content Include="Resources\add_48px.png" />
+    <Content Include="Resources\add_camera_48px.png" />
+    <Content Include="Resources\add_user_group_woman_man_skin_type_7_48px.png" />
+    <Content Include="Resources\add_user_male_50px.png" />
+    <Content Include="Resources\attach_100px.png" />
+    <None Include="Resources\calculator_80px.png" />
+    <Content Include="Resources\calendar_plus_48px.png" />
+    <Content Include="Resources\cancel_26px.png" />
+    <Content Include="Resources\cancel_48px.png" />
+    <Content Include="Resources\cash_in_hand_48px.png" />
+    <Content Include="Resources\cerrar.png" />
+    <Content Include="Resources\classroom_48px.png" />
+    <Content Include="Resources\classroom_50px.png" />
+    <Content Include="Resources\clientes.png" />
+    <Content Include="Resources\coins_48px.png" />
+    <Content Include="Resources\combo_chart_48px.png" />
+    <Content Include="Resources\compras.png" />
+    <Content Include="Resources\delete_bin_48px.png" />
+    <Content Include="Resources\diploma_48px.png" />
+    <Content Include="Resources\doughnut_chart_48px.png" />
+    <None Include="Resources\edit_file_30px.png" />
+    <Content Include="Resources\email_26px.png" />
+    <Content Include="Resources\empleados.png" />
+    <Content Include="Resources\error1_48px.png" />
+    <Content Include="Resources\error_48px.png" />
+    <Content Include="Resources\exam_48px.png" />
+    <Content Include="Resources\eye1_30px.png" />
+    <Content Include="Resources\eye_50px.png" />
+    <Content Include="Resources\facebook_old_48px.png" />
+    <None Include="Resources\Forms_img.jpg" />
+    <None Include="Resources\Forms_img1.jpg" />
+    <Content Include="Resources\gmail_48px.png" />
+    <None Include="Resources\Google Maps Old_48px.png" />
+    <Content Include="Resources\home_50px.png" />
+    <Content Include="Resources\Icons &amp; Images\add_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\add_camera_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\add_user_group_woman_man_skin_type_7_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\add_user_male_50px.png" />
+    <Content Include="Resources\Icons &amp; Images\attach_100px.png" />
+    <Content Include="Resources\Icons &amp; Images\calendar_plus_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\cancel_26px.png" />
+    <Content Include="Resources\Icons &amp; Images\cancel_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\cash_in_hand_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\cerrar.png" />
+    <Content Include="Resources\Icons &amp; Images\classroom_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\classroom_50px.png" />
+    <Content Include="Resources\Icons &amp; Images\clientes.png" />
+    <Content Include="Resources\Icons &amp; Images\coins_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\combo_chart_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\compras.png" />
+    <Content Include="Resources\Icons &amp; Images\delete_bin_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\diploma_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\doughnut_chart_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\email_26px.png" />
+    <Content Include="Resources\Icons &amp; Images\empleados.png" />
+    <Content Include="Resources\Icons &amp; Images\error1_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\error_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\exam_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\eye1_30px.png" />
+    <Content Include="Resources\Icons &amp; Images\eye_50px.png" />
+    <Content Include="Resources\Icons &amp; Images\facebook_old_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\gmail_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\home_50px.png" />
+    <Content Include="Resources\Icons &amp; Images\increase_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\info_50px.png" />
+    <Content Include="Resources\Icons &amp; Images\instagram_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\LB2Theme.png" />
+    <Content Include="Resources\Icons &amp; Images\lock_26px.png" />
+    <Content Include="Resources\Icons &amp; Images\logout_rounded_up_64px.png" />
+    <Content Include="Resources\Icons &amp; Images\log_64px.png" />
+    <Content Include="Resources\Icons &amp; Images\maxi.png" />
+    <Content Include="Resources\Icons &amp; Images\menu_50px.png" />
+    <Content Include="Resources\Icons &amp; Images\microsoft_excel_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\minimazar.png" />
+    <Content Include="Resources\Icons &amp; Images\nils_logo.jpg.jpg" />
+    <Content Include="Resources\Icons &amp; Images\ok_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\opened_folder_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\opened_folder_64px.png" />
+    <Content Include="Resources\Icons &amp; Images\order_history_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\order_history_50px.png" />
+    <Content Include="Resources\Icons &amp; Images\order_history_64px.png" />
+    <Content Include="Resources\Icons &amp; Images\pagos.png" />
+    <Content Include="Resources\Icons &amp; Images\password_26px.png" />
+    <Content Include="Resources\Icons &amp; Images\password_reset_30px.png" />
+    <Content Include="Resources\Icons &amp; Images\password_reset_32px.png" />
+    <Content Include="Resources\Icons &amp; Images\permanent_job_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\plus_50px.png" />
+    <Content Include="Resources\Icons &amp; Images\print_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\producto.png" />
+    <Content Include="Resources\Icons &amp; Images\producto2.png" />
+    <Content Include="Resources\Icons &amp; Images\read_online_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\reportes.png" />
+    <Content Include="Resources\Icons &amp; Images\report_card_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\res.png" />
+    <Content Include="Resources\Icons &amp; Images\salir.png" />
+    <Content Include="Resources\Icons &amp; Images\save_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\search_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\search_64px.png" />
+    <Content Include="Resources\Icons &amp; Images\search_account_64px.png" />
+    <Content Include="Resources\Icons &amp; Images\settings_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\settings_50px.png" />
+    <Content Include="Resources\Icons &amp; Images\shutdown_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\student_male_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\submit_progress_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\synchronize_26px.png" />
+    <Content Include="Resources\Icons &amp; Images\sync_64px.png" />
+    <Content Include="Resources\Icons &amp; Images\telegram_app_32px.png" />
+    <Content Include="Resources\Icons &amp; Images\telegram_app_64px.png" />
+    <Content Include="Resources\Icons &amp; Images\training_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\user_50px.png" />
+    <Content Include="Resources\Icons &amp; Images\user_groups_50px.png" />
+    <Content Include="Resources\Icons &amp; Images\venta.png" />
+    <Content Include="Resources\Icons &amp; Images\verified_account_48px.png" />
+    <Content Include="Resources\Icons &amp; Images\whatsapp_48px.png" />
+    <None Include="Resources\icons8_meeting_room_64px_11.png" />
+    <None Include="Resources\images %287%29.jpg" />
+    <None Include="Resources\images %284%29.jpg" />
+    <None Include="Resources\images %2810%29.jpg" />
+    <None Include="Resources\images %286%29.jpg" />
+    <None Include="Resources\images %281%29.jpg" />
+    <Content Include="Resources\increase_48px.png" />
+    <Content Include="Resources\info_50px.png" />
+    <Content Include="Resources\instagram_48px.png" />
+    <Content Include="Resources\LB2Theme.png" />
+    <Content Include="Resources\lectureprof-resize.gif" />
+    <None Include="Resources\lecturer1-resize.gif" />
+    <Content Include="Resources\lock_26px.png" />
+    <Content Include="Resources\logout_rounded_up_64px.png" />
+    <Content Include="Resources\log_64px.png" />
+    <Content Include="Resources\managecou-resize.gif" />
+    <Content Include="Resources\managegroup-resize.gif" />
+    <Content Include="Resources\managework-resize.gif" />
+    <Content Include="Resources\marks-resize.gif" />
+    <Content Include="Resources\maxi.png" />
+    <Content Include="Resources\menu_50px.png" />
+    <Content Include="Resources\microsoft_excel_48px.png" />
+    <None Include="Resources\microsoft_word_48px.png" />
+    <Content Include="Resources\minimazar.png" />
+    <Content Include="Resources\nils_logo.jpg.jpg" />
+    <Content Include="Resources\ok_48px.png" />
+    <Content Include="Resources\opened_folder_48px.png" />
+    <None Include="Resources\opened_folder_50px.png" />
+    <Content Include="Resources\opened_folder_64px.png" />
+    <Content Include="Resources\order_history_48px.png" />
+    <Content Include="Resources\order_history_50px.png" />
+    <Content Include="Resources\order_history_64px.png" />
+    <Content Include="Resources\pagos.png" />
+    <Content Include="Resources\password_26px.png" />
+    <Content Include="Resources\password_reset_30px.png" />
+    <Content Include="Resources\password_reset_32px.png" />
+    <Content Include="Resources\payment-resize.gif" />
+    <Content Include="Resources\permanent_job_48px.png" />
+    <Content Include="Resources\plus_50px.png" />
+    <Content Include="Resources\print_48px.png" />
+    <Content Include="Resources\producto.png" />
+    <Content Include="Resources\producto2.png" />
+    <Content Include="Resources\read_online_48px.png" />
+    <Content Include="Resources\reportes.png" />
+    <Content Include="Resources\reports-resize.gif" />
+    <Content Include="Resources\report_card_48px.png" />
+    <Content Include="Resources\res.png" />
+    <Content Include="Resources\salir.png" />
+    <Content Include="Resources\save_48px.png" />
+    <Content Include="Resources\schedulepro-resize.gif" />
+    <Content Include="Resources\search_48px.png" />
+    <Content Include="Resources\search_64px.png" />
+    <Content Include="Resources\search_account_64px.png" />
+    <Content Include="Resources\sendmails-resize.gif" />
+    <Content Include="Resources\settings_48px.png" />
+    <Content Include="Resources\settings_50px.png" />
+    <Content Include="Resources\shutdown_48px.png" />
+    <None Include="Resources\stock-photo-blue-wood-white-decorative-texture-wooden-table-pastel-background-2382cbe6-c222-4e43-94ff-a14d713da79d.jpg" />
+    <Content Include="Resources\student_male_48px.png" />
+    <None Include="Resources\submit_document_30px.png" />
+    <Content Include="Resources\submit_progress_48px.png" />
+    <Content Include="Resources\synchronize_26px.png" />
+    <Content Include="Resources\sync_64px.png" />
+    <Content Include="Resources\telegram_app_32px.png" />
+    <Content Include="Resources\telegram_app_64px.png" />
+    <None Include="Resources\tick_box_64px.png" />
+    <Content Include="Resources\training_48px.png" />
+    <Content Include="Resources\user_50px.png" />
+    <Content Include="Resources\user_groups_50px.png" />
+    <Content Include="Resources\venta.png" />
+    <Content Include="Resources\verified_account_48px.png" />
+    <Content Include="Resources\viewstud-resize.gif" />
+    <Content Include="Resources\whatsapp_48px.png" />
+    <Content Include="Resources\word1.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\Resources\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMLSS">
+      <Guid>{C21E9CE5-B317-463B-A1B1-B5E36EED59D0}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
