@@ -88,12 +88,15 @@
     </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -103,15 +106,6 @@
     <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
@@ -781,20 +775,8 @@
     <None Include="Icons &amp; Images\LB2Theme.png" />
     <Content Include="bin\Debug\adobe.png" />
     <Content Include="bin\Debug\CircularProgressBar.dll" />
-    <Content Include="bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll" />
-    <Content Include="bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll" />
-    <Content Include="bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll" />
-    <Content Include="bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll" />
     <Content Include="bin\Debug\EnvDTE.dll" />
     <Content Include="bin\Debug\EnvDTE80.dll" />
-    <Content Include="bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll" />
-    <Content Include="bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll" />
-    <Content Include="bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll" />
-    <Content Include="bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll" />
-    <Content Include="bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll" />
-    <Content Include="bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll" />
-    <Content Include="bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll" />
-    <Content Include="bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll" />
     <Content Include="bin\Debug\Google.Apis.Auth.dll" />
     <Content Include="bin\Debug\Google.Apis.Auth.pdb" />
     <Content Include="bin\Debug\Google.Apis.Auth.PlatformServices.dll" />
@@ -813,18 +795,6 @@
     <Content Include="bin\Debug\Google.Apis.PlatformServices.dll" />
     <Content Include="bin\Debug\Google.Apis.xml" />
     <Content Include="bin\Debug\Icons &amp; Images\delete_bin_48px.png" />
-    <Content Include="bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll" />
-    <Content Include="bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll" />
-    <Content Include="bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll" />
-    <Content Include="bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll" />
-    <Content Include="bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll" />
-    <Content Include="bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll" />
-    <Content Include="bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll" />
-    <Content Include="bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll" />
-    <Content Include="bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll" />
-    <Content Include="bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll" />
-    <Content Include="bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll" />
-    <Content Include="bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll" />
     <Content Include="bin\Debug\MetroFramework.Design.dll" />
     <Content Include="bin\Debug\MetroFramework.dll" />
     <Content Include="bin\Debug\MetroFramework.Fonts.dll" />
@@ -832,11 +802,6 @@
     <Content Include="bin\Debug\Microsoft.Build.Tasks.Core.dll" />
     <Content Include="bin\Debug\Microsoft.Build.Utilities.Core.dll" />
     <Content Include="bin\Debug\Microsoft.MSXML.dll" />
-    <Content Include="bin\Debug\Microsoft.ReportViewer.Common.dll" />
-    <Content Include="bin\Debug\Microsoft.ReportViewer.DataVisualization.dll" />
-    <Content Include="bin\Debug\Microsoft.ReportViewer.Design.dll" />
-    <Content Include="bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll" />
-    <Content Include="bin\Debug\Microsoft.ReportViewer.WinForms.dll" />
     <Content Include="bin\Debug\Microsoft.SqlServer.Types.dll" />
     <Content Include="bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll" />
     <Content Include="bin\Debug\Microsoft.VisualStudio.Data.Core.dll" />
@@ -864,14 +829,6 @@
     <Content Include="bin\Debug\NILS original.pdb" />
     <Content Include="bin\Debug\pdf.png" />
     <Content Include="bin\Debug\presentation.png" />
-    <Content Include="bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll" />
-    <Content Include="bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll" />
-    <Content Include="bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll" />
-    <Content Include="bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll" />
-    <Content Include="bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll" />
-    <Content Include="bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll" />
-    <Content Include="bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll" />
-    <Content Include="bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll" />
     <Content Include="bin\Debug\SqlServerTypes\x64\msvcr120.dll" />
     <Content Include="bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll" />
     <Content Include="bin\Debug\SqlServerTypes\x86\msvcr120.dll" />
@@ -888,14 +845,6 @@
     <Content Include="bin\Debug\WinFormAnimation.dll" />
     <Content Include="bin\Debug\word.png" />
     <Content Include="bin\Debug\word1.png" />
-    <Content Include="bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll" />
-    <Content Include="bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll" />
-    <Content Include="bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll" />
-    <Content Include="bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll" />
-    <Content Include="bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll" />
-    <Content Include="bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll" />
-    <Content Include="bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll" />
-    <Content Include="bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll" />
     <Content Include="Icons &amp; Images\add_48px.png" />
     <Content Include="Icons &amp; Images\add_camera_48px.png" />
     <Content Include="Icons &amp; Images\add_user_male_50px.png" />
